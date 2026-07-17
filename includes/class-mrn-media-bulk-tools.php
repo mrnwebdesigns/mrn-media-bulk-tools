@@ -161,9 +161,9 @@ final class MRN_Media_Bulk_Tools {
 			return self::get_media_bulk_configuration_url($bulk_action, $attachment_ids, $redirect_url);
 		}
 
-		$title_template = isset($_REQUEST['mrn_media_bulk_title_template']) ? trim((string) wp_unslash($_REQUEST['mrn_media_bulk_title_template'])) : '';
-		$alt_template = isset($_REQUEST['mrn_media_bulk_alt_template']) ? trim((string) wp_unslash($_REQUEST['mrn_media_bulk_alt_template'])) : '';
-		$caption_template = isset($_REQUEST['mrn_media_bulk_caption_template']) ? trim((string) wp_unslash($_REQUEST['mrn_media_bulk_caption_template'])) : '';
+		$title_template   = isset($_REQUEST['mrn_media_bulk_title_template']) ? trim(sanitize_text_field(wp_unslash($_REQUEST['mrn_media_bulk_title_template']))) : '';
+		$alt_template     = isset($_REQUEST['mrn_media_bulk_alt_template']) ? trim(sanitize_text_field(wp_unslash($_REQUEST['mrn_media_bulk_alt_template']))) : '';
+		$caption_template = isset($_REQUEST['mrn_media_bulk_caption_template']) ? trim(sanitize_textarea_field(wp_unslash($_REQUEST['mrn_media_bulk_caption_template']))) : '';
 		$apply_title = in_array($bulk_action, array('mrn_media_bulk_update_title', 'mrn_media_bulk_update_all'), true);
 		$apply_alt = in_array($bulk_action, array('mrn_media_bulk_update_alt', 'mrn_media_bulk_update_all'), true);
 		$apply_caption = in_array($bulk_action, array('mrn_media_bulk_update_caption', 'mrn_media_bulk_update_all'), true);
@@ -332,7 +332,7 @@ final class MRN_Media_Bulk_Tools {
 
 	private static function get_media_bulk_redirect_url() {
 		if (isset($_REQUEST['mrn_media_bulk_redirect'])) {
-			$redirect_url = wp_unslash($_REQUEST['mrn_media_bulk_redirect']);
+			$redirect_url = esc_url_raw(wp_unslash($_REQUEST['mrn_media_bulk_redirect']));
 			$redirect_url = is_string($redirect_url) ? self::sanitize_media_bulk_redirect_url($redirect_url) : '';
 
 			if ('' !== $redirect_url) {
