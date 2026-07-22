@@ -2,10 +2,10 @@
   "project": "mrn-media-bulk-tools",
   "release_unit": "standalone-plugin",
   "baseline": {
-    "pinned_at": "2026-06-30",
+    "pinned_at": "2026-07-22",
     "repo_path": "/Users/khofmeyer/Development/MRN/plugins/mrn-media-bulk-tools",
     "integration_target": "mrn-plugin-stack",
     "integration_mode": "in-repo-plugin",
-    "plugin_version": "0.1.0"
+    "plugin_version": "0.12.1"
   }
 }

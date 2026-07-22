@@ -1,7 +1,7 @@
-# AGENTS.md - MRN Media Bulk Tools
+# AGENTS.md - MRN Media Tools
 
 ## Purpose
-This directory contains the MRN Media Bulk Tools WordPress plugin in-repo standard plugin release unit.
+This directory contains the MRN Media Tools WordPress plugin in-repo standard plugin release unit. The legacy directory slug is retained for update compatibility.
 
 ## Rules
 - Keep changes scoped to this plugin release unit.

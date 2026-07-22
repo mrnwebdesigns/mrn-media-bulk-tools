@@ -1,9 +1,9 @@
-# Stack Baseline - MRN Media Bulk Tools
+# Stack Baseline - MRN Media Tools
 
 ## Baseline Snapshot
-- Date pinned: 2026-06-30
+- Date pinned: 2026-07-22
 - Plugin source path: `/Users/khofmeyer/Development/MRN/plugins/mrn-media-bulk-tools`
-- Current plugin version: `0.1.0`
+- Current plugin version: `0.12.1`
 - Intended integration target: mrn-plugin-stack
 - Current release model: in-repo standard plugin release unit
 

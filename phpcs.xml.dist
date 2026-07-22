@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<ruleset name="MRN Media Bulk Tools">
-	<description>Release-readiness WordPress checks for the MRN Media Bulk Tools plugin.</description>
+<ruleset name="MRN Media Tools">
+	<description>Release-readiness WordPress checks for the MRN Media Tools plugin.</description>
 
 	<arg value="ps"/>
 	<arg name="basepath" value="./"/>

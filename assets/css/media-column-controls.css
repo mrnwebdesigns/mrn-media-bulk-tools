@@ -1,0 +1,108 @@
+.wp-list-table.media th:not(.check-column) {
+	position: relative;
+}
+
+.mrn-media-table-scroll {
+	box-sizing: border-box;
+	max-width: 100%;
+	overflow-x: auto;
+	width: 100%;
+}
+
+.mrn-media-table-scrollbar {
+	box-sizing: border-box;
+	height: 18px;
+	margin-bottom: 4px;
+	max-width: 100%;
+	overflow-x: auto;
+	overflow-y: hidden;
+	width: 100%;
+}
+
+.mrn-media-table-scrollbar:focus {
+	box-shadow: 0 0 0 1px #fff, 0 0 0 3px #2271b1;
+	outline: 2px solid transparent;
+}
+
+.mrn-media-table-scrollbar__spacer {
+	height: 1px;
+}
+
+.mrn-media-table-scroll .wp-list-table.media {
+	margin-bottom: 0;
+	table-layout: fixed;
+}
+
+.mrn-media-column-autofit-measure {
+	border: 0 !important;
+	left: -10000px;
+	max-width: none;
+	pointer-events: none;
+	position: fixed;
+	table-layout: auto !important;
+	top: -10000px;
+	visibility: hidden;
+	width: max-content !important;
+}
+
+.mrn-media-column-autofit-measure th,
+.mrn-media-column-autofit-measure td {
+	max-width: none !important;
+	width: max-content !important;
+}
+
+.wp-list-table.media .mrn-media-column-resizer {
+	bottom: 0;
+	cursor: col-resize;
+	left: -9px;
+	position: absolute;
+	touch-action: none;
+	top: 0;
+	width: 18px;
+	z-index: 5;
+}
+
+.wp-list-table.media .mrn-media-column-resizer.is-table-edge {
+	left: auto;
+	right: -9px;
+}
+
+.wp-list-table.media .mrn-media-column-resizer::after {
+	background: transparent;
+	bottom: 4px;
+	content: '';
+	left: 8px;
+	position: absolute;
+	top: 4px;
+	width: 2px;
+}
+
+.wp-list-table.media .mrn-media-column-resizer:hover::after,
+.wp-list-table.media .mrn-media-column-resizer:focus::after,
+.wp-list-table.media .mrn-media-column-resizer.is-resizing::after,
+.mrn-media-column-resizing .wp-list-table.media .mrn-media-column-resizer::after {
+	background: #2271b1;
+}
+
+.wp-list-table.media .mrn-media-column-resizer:focus {
+	box-shadow: 0 0 0 1px #fff, 0 0 0 3px #2271b1;
+	outline: 2px solid transparent;
+}
+
+.mrn-media-column-resizing {
+	cursor: col-resize;
+	user-select: none;
+}
+
+.tablenav.top .mrn-media-columns-button {
+	margin-left: 6px;
+}
+
+.wp-list-table.media .mrn-media-folder-list,
+.wp-list-table.media .mrn-media-folder {
+	display: block;
+}
+
+.wp-list-table.media .mrn-media-folder + .mrn-media-folder {
+	margin-top: 4px;
+}
