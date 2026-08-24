@@ -1,6 +1,6 @@
 # MRN Media Tools
 
-Extensible WordPress Media Library utilities. The first module adds bulk
+Extensible WordPress Media Library utilities. The canonical source lives in the independent `mrnwebdesigns/mrn-media-bulk-tools` repository; MRN uses a local checkout symlink for stack integration. The first module adds bulk
 metadata updates to the Media Library list view.
 
 ## Current Modules
@@ -49,7 +49,7 @@ not be discoverable through a WordPress database scan.
 Run plugin-scoped QA with full static analysis:
 
 ```bash
-MRN_QA_CODE_ANALYSIS_SCOPE=all mrn-qa run --project-root /Users/khofmeyer/Development/MRN/plugins/mrn-media-bulk-tools
+MRN_QA_CODE_ANALYSIS_SCOPE=all mrn-qa run --project-root /Users/khofmeyer/Development/MRN-plugins/mrn-media-bulk-tools
 ```
 
 Runtime browser, accessibility, API, and performance checks should be run separately against an explicit target site when this plugin change affects rendered output or live WordPress behavior.
