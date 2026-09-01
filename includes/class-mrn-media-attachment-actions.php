@@ -27,12 +27,14 @@ final class MRN_Media_Attachment_Actions {
 		}
 
 		$plugin_file = dirname(__DIR__) . '/mrn-media-bulk-tools.php';
+		$style_file  = dirname(__DIR__) . '/assets/css/media-attachment-actions.css';
+		$style_version = file_exists($style_file) ? (string) filemtime($style_file) : '0.12.1';
 
 		wp_enqueue_style(
 			'mrn-media-attachment-actions',
 			plugins_url('assets/css/media-attachment-actions.css', $plugin_file),
 			array(),
-			'0.12.1'
+			$style_version
 		);
 	}
 
@@ -73,7 +75,7 @@ final class MRN_Media_Attachment_Actions {
 			}
 
 			$action_markup = sprintf(
-				'<span class="mrn-media-action mrn-media-action-%1$s">%2$s</span>',
+				'<div class="mrn-media-action mrn-media-action-%1$s">%2$s</div>',
 				sanitize_html_class($key),
 				$action
 			);
@@ -88,7 +90,7 @@ final class MRN_Media_Attachment_Actions {
 		$menu_items = $regular_actions;
 
 		if (!empty($destructive_actions)) {
-			$menu_items[] = '<span class="mrn-media-actions-menu__separator" aria-hidden="true"></span>';
+			$menu_items[] = '<div class="mrn-media-actions-menu__separator" aria-hidden="true"></div>';
 			$menu_items   = array_merge($menu_items, $destructive_actions);
 		}
 
@@ -98,7 +100,7 @@ final class MRN_Media_Attachment_Actions {
 
 		return array(
 			'mrn_media_actions' => sprintf(
-				'<details class="mrn-media-actions-menu"><summary>%1$s</summary><span class="mrn-media-actions-menu__content">%2$s</span></details>',
+				'<details class="mrn-media-actions-menu"><summary>%1$s</summary><div class="mrn-media-actions-menu__content">%2$s</div></details>',
 				esc_html__('Actions', 'mrn-media-bulk-tools'),
 				implode('', $menu_items)
 			),

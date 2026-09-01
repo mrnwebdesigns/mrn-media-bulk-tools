@@ -1,12 +1,24 @@
 .upload-php .row-actions .mrn-media-actions-menu {
 	display: inline-block;
 	position: relative;
+	vertical-align: top;
 }
 
 .upload-php .row-actions .mrn-media-actions-menu summary {
+	background: #f0f6fc;
+	border: 1px solid #dcdcde;
+	border-radius: 999px;
 	color: #2271b1;
 	cursor: pointer;
+	display: inline-block;
+	line-height: 1.4;
 	list-style: none;
+	padding: 3px 10px;
+	transition: background-color 120ms ease, border-color 120ms ease;
+}
+
+.upload-php .row-actions .mrn-media-actions-menu summary::marker {
+	content: '';
 }
 
 .upload-php .row-actions .mrn-media-actions-menu summary::-webkit-details-marker {
@@ -16,9 +28,19 @@
 .upload-php .row-actions .mrn-media-actions-menu summary::after {
 	content: '\25BE';
 	display: inline-block;
-	font-size: 11px;
-	margin-left: 4px;
+	font-size: 17px;
+	line-height: 0.8;
+	margin-left: 7px;
 	transform: translateY(-1px);
+}
+
+.upload-php .row-actions .mrn-media-actions-menu:hover summary,
+.upload-php .row-actions .mrn-media-actions-menu[open] summary,
+.upload-php .row-actions .mrn-media-actions-menu:focus-within summary,
+.upload-php .row-actions .mrn-media-actions-menu summary:hover,
+.upload-php .row-actions .mrn-media-actions-menu summary:focus-visible {
+	background: #e5f1fb;
+	border-color: #72aee6;
 }
 
 .upload-php .row-actions .mrn-media-actions-menu[open] summary::after {
@@ -26,7 +48,7 @@
 }
 
 .upload-php .row-actions .mrn-media-actions-menu summary:focus-visible {
-	box-shadow: 0 0 0 2px #2271b1;
+	box-shadow: 0 0 0 2px #2271b1, 0 0 0 4px #fff;
 	outline: 2px solid transparent;
 }
 
