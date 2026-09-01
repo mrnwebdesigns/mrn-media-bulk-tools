@@ -5,8 +5,9 @@ metadata updates to the Media Library list view.
 
 ## Current Modules
 
-- **Attachment actions:** Hide WordPress's attachment-page View action while
-  retaining direct file URL access.
+- **Attachment actions:** Hide WordPress's attachment-page View action and
+  group all Media Library row actions in one keyboard-friendly menu. Destructive
+  actions are kept at the bottom and styled separately.
 - **Bulk metadata tools:** Update attachment titles, image alt text, captions,
   or all three for selected Media Library items.
 - **Dimensions column:** Show image width and height in the Media Library list
