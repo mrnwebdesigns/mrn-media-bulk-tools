@@ -10,6 +10,10 @@ metadata updates to the Media Library list view.
   actions are kept at the bottom and styled separately.
 - **Bulk metadata tools:** Update attachment titles, image alt text, captions,
   or all three for selected Media Library items.
+- **Inline metadata editor:** Review paginated attachments in a dedicated
+  workspace; filter by media type or missing fields; and edit title, image alt
+  text, caption, and description per row. Changed rows are selected
+  automatically and can be saved together or one at a time.
 - **Dimensions column:** Show image width and height in the Media Library list
   view from core metadata, with a bounded SVG-header fallback.
 - **HappyFiles folders column:** Show every folder assigned to an attachment,

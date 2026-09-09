@@ -60,7 +60,7 @@ final class MRN_Media_Bulk_Tools {
 		$action_label = self::get_media_bulk_action_labels()[$bulk_action] ?? '';
 
 		if (!self::is_custom_media_bulk_action($bulk_action) || empty($attachment_ids)) {
-			self::render_media_bulk_entry_message();
+			MRN_Media_Bulk_Editor::render_page();
 			return;
 		}
 		?>
@@ -319,17 +319,6 @@ final class MRN_Media_Bulk_Tools {
 		printf('<div class="notice notice-success"><p>%s</p></div>', esc_html($message));
 	}
 
-	private static function is_media_library_list_mode() {
-		if (isset($_GET['mode'])) {
-			return 'grid' !== sanitize_key(wp_unslash($_GET['mode']));
-		}
-
-		$mode = get_user_option('media_library_mode');
-		$mode = is_string($mode) ? sanitize_key($mode) : '';
-
-		return 'grid' !== $mode;
-	}
-
 	private static function get_media_bulk_redirect_url() {
 		if (isset($_REQUEST['mrn_media_bulk_redirect'])) {
 			$redirect_url = esc_url_raw(wp_unslash($_REQUEST['mrn_media_bulk_redirect']));
@@ -347,20 +336,6 @@ final class MRN_Media_Bulk_Tools {
 		}
 
 		return self::sanitize_media_bulk_redirect_url($redirect_url);
-	}
-
-	private static function get_media_bulk_entry_url() {
-		return add_query_arg('mode', 'list', admin_url('upload.php'));
-	}
-
-	private static function render_media_bulk_entry_message() {
-		?>
-		<div class="wrap">
-			<h1><?php echo esc_html__('Bulk Media Update', 'mrn-media-bulk-tools'); ?></h1>
-			<p><?php echo esc_html__('Select one or more Media Library items, then choose a media update from the Bulk actions menu.', 'mrn-media-bulk-tools'); ?></p>
-			<p><a class="button button-primary" href="<?php echo esc_url(self::get_media_bulk_entry_url()); ?>"><?php echo esc_html__('Open Media Library', 'mrn-media-bulk-tools'); ?></a></p>
-		</div>
-		<?php
 	}
 
 	private static function sanitize_media_bulk_redirect_url($redirect_url) {

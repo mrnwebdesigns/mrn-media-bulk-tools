@@ -2,7 +2,7 @@
 /**
  * Plugin Name: MRN Media Tools
  * Description: Provides extensible Media Library utilities, including bulk metadata updates.
- * Version: 0.12.3
+ * Version: 0.13.0
  * Author: MRN Web Designs
  */
 
@@ -11,6 +11,7 @@ if (!defined('ABSPATH')) {
 }
 
 require_once plugin_dir_path(__FILE__) . 'includes/class-mrn-media-bulk-tools.php';
+require_once plugin_dir_path(__FILE__) . 'includes/class-mrn-media-bulk-editor.php';
 require_once plugin_dir_path(__FILE__) . 'includes/class-mrn-media-attachment-actions.php';
 require_once plugin_dir_path(__FILE__) . 'includes/class-mrn-media-dimensions-column.php';
 require_once plugin_dir_path(__FILE__) . 'includes/class-mrn-media-folders-column.php';

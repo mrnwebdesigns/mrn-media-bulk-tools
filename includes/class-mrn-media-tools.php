@@ -8,12 +8,13 @@ if (!defined('ABSPATH')) {
  * Coordinates the modules that make up MRN Media Tools.
  */
 final class MRN_Media_Tools {
-	const VERSION = '0.12.3';
+	const VERSION = '0.13.0';
 
 	/**
 	 * Initialize plugin modules.
 	 */
 	public static function init() {
+		MRN_Media_Bulk_Editor::init();
 		MRN_Media_Bulk_Tools::init();
 		MRN_Media_Attachment_Actions::init();
 		MRN_Media_Dimensions_Column::init();
