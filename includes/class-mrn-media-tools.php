@@ -8,7 +8,7 @@ if (!defined('ABSPATH')) {
  * Coordinates the modules that make up MRN Media Tools.
  */
 final class MRN_Media_Tools {
-	const VERSION = '0.12.2';
+	const VERSION = '0.12.3';
 
 	/**
 	 * Initialize plugin modules.

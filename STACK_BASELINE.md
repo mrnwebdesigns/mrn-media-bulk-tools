@@ -3,7 +3,7 @@
 ## Baseline Snapshot
 - Date pinned: 2026-09-09
 - Plugin source path: `/Users/khofmeyer/Development/MRN-plugins/mrn-media-bulk-tools`
-- Current plugin version: `0.12.2`
+- Current plugin version: `0.12.3`
 - Intended integration target: mrn-plugin-stack
 - Current release model: independent standard plugin repository
 

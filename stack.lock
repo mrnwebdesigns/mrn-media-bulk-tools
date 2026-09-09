@@ -6,6 +6,6 @@
     "repo_path": "/Users/khofmeyer/Development/MRN-plugins/mrn-media-bulk-tools",
     "integration_target": "mrn-plugin-stack",
     "integration_mode": "standalone-plugin",
-    "plugin_version": "0.12.2"
+    "plugin_version": "0.12.3"
   }
 }

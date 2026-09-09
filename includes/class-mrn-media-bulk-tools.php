@@ -33,7 +33,7 @@ final class MRN_Media_Bulk_Tools {
 	}
 
 	public static function register_media_bulk_tools_page() {
-		$page_hook = add_submenu_page(
+		add_submenu_page(
 			'upload.php',
 			__('Bulk Media Update', 'mrn-media-bulk-tools'),
 			__('Bulk Media Update', 'mrn-media-bulk-tools'),
@@ -41,34 +41,10 @@ final class MRN_Media_Bulk_Tools {
 			'mrn-media-bulk-tools',
 			array(__CLASS__, 'render_media_bulk_tools_page')
 		);
-
-		if (is_string($page_hook) && '' !== $page_hook) {
-			add_action('load-' . $page_hook, array(__CLASS__, 'prepare_media_bulk_tools_page'));
-		}
 	}
 
 	public static function hide_media_bulk_tools_page() {
 		remove_submenu_page('upload.php', 'mrn-media-bulk-tools');
-	}
-
-	public static function prepare_media_bulk_tools_page() {
-		if (!current_user_can('upload_files')) {
-			wp_die(esc_html__('You are not allowed to bulk edit media items.', 'mrn-media-bulk-tools'));
-		}
-
-		$bulk_action = isset($_GET['bulk_action']) ? sanitize_key(wp_unslash($_GET['bulk_action'])) : '';
-		$request_token = isset($_GET['mrn_media_bulk_request']) ? sanitize_key(wp_unslash($_GET['mrn_media_bulk_request'])) : '';
-		$request_data = self::get_media_bulk_request_data($request_token);
-		$attachment_ids = isset($request_data['attachment_ids']) && is_array($request_data['attachment_ids']) ? wp_parse_id_list($request_data['attachment_ids']) : array();
-
-		if (self::is_custom_media_bulk_action($bulk_action) && !empty($attachment_ids)) {
-			return;
-		}
-
-		if (!headers_sent()) {
-			wp_safe_redirect(self::get_media_bulk_entry_url());
-			exit;
-		}
 	}
 
 	public static function render_media_bulk_tools_page() {

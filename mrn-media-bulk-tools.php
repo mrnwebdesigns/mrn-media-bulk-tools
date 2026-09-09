@@ -2,7 +2,7 @@
 /**
  * Plugin Name: MRN Media Tools
  * Description: Provides extensible Media Library utilities, including bulk metadata updates.
- * Version: 0.12.2
+ * Version: 0.12.3
  * Author: MRN Web Designs
  */
 
