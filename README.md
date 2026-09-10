@@ -8,8 +8,9 @@ metadata updates to the Media Library list view.
 - **Attachment actions:** Hide WordPress's attachment-page View action and
   group all Media Library row actions in one keyboard-friendly menu. Destructive
   actions are kept at the bottom and styled separately.
-- **Bulk metadata tools:** Update attachment titles, image alt text, captions,
-  or all three for selected Media Library items.
+- **Bulk metadata tools:** Open Bulk Media Update from the permanent Media
+  submenu, or update attachment titles, image alt text, captions, or all three
+  for selected Media Library items.
 - **Inline metadata editor:** Review paginated attachments in a dedicated
   workspace; filter by media type or missing fields; and edit title, image alt
   text, caption, and description per row. Changed rows are selected
@@ -54,6 +55,7 @@ not be discoverable through a WordPress database scan.
 Run plugin-scoped QA with full static analysis:
 
 ```bash
+php tests/menu-registration-regression.php
 MRN_QA_CODE_ANALYSIS_SCOPE=all mrn-qa run --project-root /Users/khofmeyer/Development/MRN-plugins/mrn-media-bulk-tools
 ```
 

@@ -15,7 +15,6 @@ final class MRN_Media_Bulk_Tools {
 		add_filter('bulk_actions-upload', array(__CLASS__, 'register_media_bulk_actions'));
 		add_filter('handle_bulk_actions-upload', array(__CLASS__, 'handle_media_bulk_action'), 10, 3);
 		add_action('admin_menu', array(__CLASS__, 'register_media_bulk_tools_page'));
-		add_action('admin_head', array(__CLASS__, 'hide_media_bulk_tools_page'));
 		add_action('admin_notices', array(__CLASS__, 'render_media_bulk_action_notice'));
 	}
 
@@ -41,10 +40,6 @@ final class MRN_Media_Bulk_Tools {
 			'mrn-media-bulk-tools',
 			array(__CLASS__, 'render_media_bulk_tools_page')
 		);
-	}
-
-	public static function hide_media_bulk_tools_page() {
-		remove_submenu_page('upload.php', 'mrn-media-bulk-tools');
 	}
 
 	public static function render_media_bulk_tools_page() {

@@ -4,7 +4,7 @@ Tags: media, attachments, bulk edit, accessibility
 Requires at least: 6.0
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 0.13.0
+Stable tag: 0.13.1
 License: Proprietary
 
 Extensible Media Library utilities for bulk metadata updates, usage auditing, file details, and attachment actions.
@@ -14,6 +14,9 @@ Extensible Media Library utilities for bulk metadata updates, usage auditing, fi
 MRN Media Tools extends the WordPress Media Library with an inline metadata editor; bulk title, alt text, and caption updates; attachment usage and file-detail columns; list filters; configurable columns; and grouped row actions.
 
 == Changelog ==
+
+= 0.13.1 =
+* Keep Bulk Media Update visible as a permanent submenu under Media.
 
 = 0.13.0 =
 * Add a dedicated, paginated media metadata workspace with inline title, alt text, caption, and description editing.
